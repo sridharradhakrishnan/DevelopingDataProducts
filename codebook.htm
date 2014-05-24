@@ -1,0 +1,574 @@
+<html>
+
+<head>
+<meta name=Title content=CodeBook>
+<meta name=Keywords content="">
+<meta http-equiv=Content-Type content="text/html; charset=macintosh">
+<meta name=Generator content="Microsoft Word 14 (filtered)">
+<title>CodeBook</title>
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:"\FF2D\FF33 \660E\671D";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\FF2D\FF33 \660E\671D";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:Cambria;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:Cambria;}
+.MsoChpDefault
+	{font-family:Cambria;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 58.5pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple>
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=center style='text-align:center'><span class=heading><b><span>Human
+Activity Recognition Using Smartphones Data Set</span></b></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span class=heading><b><span>CODE
+BOOK</span></b></span></p>
+
+<p class=MsoNormal><span class=heading><span>&nbsp;</span></span></p>
+
+<p class=MsoListParagraph style='margin-left:.25in;text-indent:-.25in'><span
+class=heading><span>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span class=heading><span>Data set download link: </span></span></p>
+
+<p class=MsoListParagraph style='margin-left:.25in'><span class=heading><span>&nbsp;</span></span></p>
+
+<p class=MsoListParagraph style='margin-left:.25in'><span class=heading><span><a
+href="https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip">https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip</a>
+(90MB)</span></span></p>
+
+<p class=MsoListParagraph style='margin-left:.25in'><span class=heading><span>&nbsp;</span></span></p>
+
+<p class=MsoListParagraph style='margin-left:.25in;text-indent:-.25in'><span
+class=heading><span>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span class=heading><span>Project Information web link:</span></span></p>
+
+<p class=MsoListParagraph style='margin-left:.25in'><span class=heading><span>&nbsp;</span></span></p>
+
+<p class=MsoListParagraph style='margin-left:.25in'><span class=heading><span><a
+href="http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones">http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones</a></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:.25in'><span class=heading><span>&nbsp;</span></span></p>
+
+<p class=MsoListParagraph style='margin-left:.25in;text-indent:-.25in'><span
+class=heading><span>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span class=heading><span>Files in the data set with
+description: After you uncompress it a folder UCI HAR Dataset is created and
+this has the following files and subfolders:</span></span></p>
+
+<p class=MsoNormal><span class=heading><span>&nbsp;</span></span></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span class=heading><span>activity_labels.txt</span></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span class=heading><span>file</span></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span class=heading><span>Six activities along with IDs
+  are defined where the first </span></span></p>
+  <p class=MsoNormal><span class=heading><span>Column is the activity ID and
+  the second column is the activity</span></span></p>
+  <p class=MsoNormal><span class=heading><span>1 WALKING</span></span></p>
+  <p class=MsoNormal><span class=heading><span>2 WALKING_UPSTAIRS</span></span></p>
+  <p class=MsoNormal><span class=heading><span>3 WALKING_DOWNSTAIRS</span></span></p>
+  <p class=MsoNormal><span class=heading><span>4 SITTING</span></span></p>
+  <p class=MsoNormal><span class=heading><span>5 STANDING</span></span></p>
+  <p class=MsoNormal><span class=heading><span>6 LAYING</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span class=heading><span>features_info.txt</span></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span class=heading><span>file</span></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span class=heading><span>Contains an excellent
+  description of the various features listed in the file features.txt</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span class=heading><span>features.txt</span></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span class=heading><span>file</span></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span class=heading><span>561 features are listed here
+  that are created after processing the raw sensor data in the directory test
+  and train.&nbsp; Each row in this file contains the feature ID and the
+  feature label (partially listed below):</span></span></p>
+  <p class=MsoNormal><span class=heading><span>1 tBodyAcc-mean()-X</span></span></p>
+  <p class=MsoNormal><span class=heading><span>2 tBodyAcc-mean()-Y</span></span></p>
+  <p class=MsoNormal><span class=heading><span>3 tBodyAcc-mean()-Z</span></span></p>
+  <p class=MsoNormal><span class=heading><span>4 tBodyAcc-std()-X</span></span></p>
+  <p class=MsoNormal><span class=heading><span>5 tBodyAcc-std()-Y</span></span></p>
+  <p class=MsoNormal><span class=heading><span>6 tBodyAcc-std()-Z</span></span></p>
+  <p class=MsoNormal><span class=heading><span>….</span></span></p>
+  <p class=MsoNormal><span class=heading><span>….</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span class=heading><span>README.txt</span></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span class=heading><span>file</span></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span class=heading><span>Contains information pertaining
+  to all the files</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span class=heading><span>test</span></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span class=heading><span>folder</span></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span class=heading><span>Contains the following files and
+  folders:</span></span></p>
+  <p class=MsoNormal><span class=heading><span>Inertial Signals &#8211; Folder
+  that contains 9 files each file has 128 columns of numerals and 2947 rows</span></span></p>
+  <p class=MsoNormal><span class=heading><span>subject_test.txt &#8211;
+  contains 2947 rows of integers in the range [1-30]</span></span></p>
+  <p class=MsoNormal><span class=heading><span>X_test.txt &#8211; contains 2947
+  rows and 128 columns</span></span></p>
+  <p class=MsoNormal><span class=heading><span>y_test.txt &#8211; contains one
+  column of numbers in the range [1-6] each corresponding to the activity ID.</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span class=heading><span>train</span></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span class=heading><span>folder</span></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span class=heading><span>Contains the similar files as in
+  test by the number of observations is 7352</span></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span class=heading><span>&nbsp;</span></span></p>
+
+<p class=MsoNormal><span class=heading><span>&nbsp;</span></span></p>
+
+<p class=MsoListParagraph style='margin-left:.25in;text-indent:-.25in'><span
+class=heading><span>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span class=heading><span>From all the above data items a
+tidy data set was created (tidydataoutput.txt).&nbsp; It contains 180
+observations and 88 columns.&nbsp; The first three columns are observation
+number, activity, and subject no. A sample is shown below:</span></span></p>
+
+<p class=MsoNormal><span class=heading><span>&nbsp;</span></span></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=505
+ style='border-collapse:collapse;border:none'>
+ <tr style='height:15.0pt'>
+  <td width=41 nowrap valign=top style='width:41.4pt;border:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal><span style='font-family:Calibri;color:black'>obsno</span></p>
+  </td>
+  <td width=131 nowrap valign=top style='width:131.15pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal><span style='font-family:Calibri;color:black'>activity</span></p>
+  </td>
+  <td width=62 nowrap valign=top style='width:62.35pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal><span style='font-family:Calibri;color:black'>subjectno</span></p>
+  </td>
+  <td width=90 nowrap valign=top style='width:1.25in;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal><span style='font-family:Calibri;color:black'>tbodyaccmeanx</span></p>
+  </td>
+  <td width=90 nowrap valign=top style='width:1.25in;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal><span style='font-family:Calibri;color:black'>tbodyaccmeany</span></p>
+  </td>
+  <td width=90 nowrap valign=top style='width:1.25in;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal><span style='font-family:Calibri;color:black'>tbodyaccmeanz</span></p>
+  </td>
+ </tr>
+ <tr style='height:15.0pt'>
+  <td width=41 nowrap valign=top style='width:41.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>1</span></p>
+  </td>
+  <td width=131 nowrap valign=top style='width:131.15pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal><span style='font-family:Calibri;color:black'>LAYING</span></p>
+  </td>
+  <td width=62 nowrap valign=top style='width:62.35pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>1</span></p>
+  </td>
+  <td width=90 nowrap valign=top style='width:1.25in;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>0.221598244</span></p>
+  </td>
+  <td width=90 nowrap valign=top style='width:1.25in;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>-0.040513953</span></p>
+  </td>
+  <td width=90 nowrap valign=top style='width:1.25in;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>-0.113203554</span></p>
+  </td>
+ </tr>
+ <tr style='height:15.0pt'>
+  <td width=41 nowrap valign=top style='width:41.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>2</span></p>
+  </td>
+  <td width=131 nowrap valign=top style='width:131.15pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal><span style='font-family:Calibri;color:black'>SITTING</span></p>
+  </td>
+  <td width=62 nowrap valign=top style='width:62.35pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>1</span></p>
+  </td>
+  <td width=90 nowrap valign=top style='width:1.25in;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>0.261237565</span></p>
+  </td>
+  <td width=90 nowrap valign=top style='width:1.25in;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>-0.001308288</span></p>
+  </td>
+  <td width=90 nowrap valign=top style='width:1.25in;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>-0.104544182</span></p>
+  </td>
+ </tr>
+ <tr style='height:15.0pt'>
+  <td width=41 nowrap valign=top style='width:41.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>3</span></p>
+  </td>
+  <td width=131 nowrap valign=top style='width:131.15pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal><span style='font-family:Calibri;color:black'>STANDING</span></p>
+  </td>
+  <td width=62 nowrap valign=top style='width:62.35pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>1</span></p>
+  </td>
+  <td width=90 nowrap valign=top style='width:1.25in;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>0.278917629</span></p>
+  </td>
+  <td width=90 nowrap valign=top style='width:1.25in;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>-0.01613759</span></p>
+  </td>
+  <td width=90 nowrap valign=top style='width:1.25in;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>-0.110601818</span></p>
+  </td>
+ </tr>
+ <tr style='height:15.0pt'>
+  <td width=41 nowrap valign=top style='width:41.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>4</span></p>
+  </td>
+  <td width=131 nowrap valign=top style='width:131.15pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal><span style='font-family:Calibri;color:black'>WALKING</span></p>
+  </td>
+  <td width=62 nowrap valign=top style='width:62.35pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>1</span></p>
+  </td>
+  <td width=90 nowrap valign=top style='width:1.25in;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>0.277330759</span></p>
+  </td>
+  <td width=90 nowrap valign=top style='width:1.25in;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>-0.017383819</span></p>
+  </td>
+  <td width=90 nowrap valign=top style='width:1.25in;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>-0.111148104</span></p>
+  </td>
+ </tr>
+ <tr style='height:15.0pt'>
+  <td width=41 nowrap valign=top style='width:41.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>5</span></p>
+  </td>
+  <td width=131 nowrap valign=top style='width:131.15pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal><span style='font-family:Calibri;color:black'>WALKING_DOWNSTAIRS</span></p>
+  </td>
+  <td width=62 nowrap valign=top style='width:62.35pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>1</span></p>
+  </td>
+  <td width=90 nowrap valign=top style='width:1.25in;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>0.28918832</span></p>
+  </td>
+  <td width=90 nowrap valign=top style='width:1.25in;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>-0.009918505</span></p>
+  </td>
+  <td width=90 nowrap valign=top style='width:1.25in;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>-0.107566191</span></p>
+  </td>
+ </tr>
+ <tr style='height:15.0pt'>
+  <td width=41 nowrap valign=top style='width:41.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>6</span></p>
+  </td>
+  <td width=131 nowrap valign=top style='width:131.15pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal><span style='font-family:Calibri;color:black'>WALKING_UPSTAIRS</span></p>
+  </td>
+  <td width=62 nowrap valign=top style='width:62.35pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>1</span></p>
+  </td>
+  <td width=90 nowrap valign=top style='width:1.25in;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>0.25546169</span></p>
+  </td>
+  <td width=90 nowrap valign=top style='width:1.25in;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>-0.023953149</span></p>
+  </td>
+  <td width=90 nowrap valign=top style='width:1.25in;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>-0.097302002</span></p>
+  </td>
+ </tr>
+ <tr style='height:15.0pt'>
+  <td width=41 nowrap valign=top style='width:41.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>7</span></p>
+  </td>
+  <td width=131 nowrap valign=top style='width:131.15pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal><span style='font-family:Calibri;color:black'>LAYING</span></p>
+  </td>
+  <td width=62 nowrap valign=top style='width:62.35pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>2</span></p>
+  </td>
+  <td width=90 nowrap valign=top style='width:1.25in;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>0.281373404</span></p>
+  </td>
+  <td width=90 nowrap valign=top style='width:1.25in;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>-0.01815874</span></p>
+  </td>
+  <td width=90 nowrap valign=top style='width:1.25in;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>-0.10724561</span></p>
+  </td>
+ </tr>
+ <tr style='height:15.0pt'>
+  <td width=41 nowrap valign=top style='width:41.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>8</span></p>
+  </td>
+  <td width=131 nowrap valign=top style='width:131.15pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal><span style='font-family:Calibri;color:black'>SITTING</span></p>
+  </td>
+  <td width=62 nowrap valign=top style='width:62.35pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>2</span></p>
+  </td>
+  <td width=90 nowrap valign=top style='width:1.25in;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>0.277087352</span></p>
+  </td>
+  <td width=90 nowrap valign=top style='width:1.25in;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>-0.015687994</span></p>
+  </td>
+  <td width=90 nowrap valign=top style='width:1.25in;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Calibri;color:black'>-0.109218272</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span class=heading><span>&nbsp;</span></span></p>
+
+<p class=MsoNormal><span class=heading><span>&nbsp;</span></span></p>
+
+<p class=MsoNormal><span class=heading><span>Each observation is a aggregate that
+is performed for each activity for each subject on partial subset of the 561
+features.&nbsp; These features were selected based on partial matching, that is
+looking for feature labels that contains the word “mean” or “std” (standard
+deviation).</span></span></p>
+
+<p class=MsoListParagraph style='margin-left:.25in'><span class=heading><span>&nbsp;</span></span></p>
+
+<p class=MsoListParagraph style='margin-left:.25in'><span class=heading><span>&nbsp;</span></span></p>
+
+<p class=MsoListParagraph style='margin-left:.25in'>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>
