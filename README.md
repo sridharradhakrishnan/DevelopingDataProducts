@@ -111,41 +111,6 @@ r3$TOTALCASH <- dollar(r3$TOTALCASH)
 r3
 ```
 
-### Tornadoes in the United States
-
-The following plot will show pictorially the human impact of tornadoes in each of the states in the United States starting from January 1, 1990 to November 30, 2011. The barplot shows that Alabama and Texas had nearly the same amount of human impact due to tornadoes.
-
-<figure>
-```{r, echo=TRUE, cache=TRUE}
-adate <- "01/01/1990 0:00:00"
-r4 <- dfsmall[grep("TORNADOES",dfsmall$EVTYPE),]
-r4 <- subset(r4,r4$BGN_DATE > adate)
-r5 <- ddply(r4,.(STATE),colwise(sum, c("HARMED")))
-bp <- barplot(r5$HARMED,las=2,names=r5$STATE,cex.names=0.5,cex.axis=0.5,
-              horiz=FALSE,space=5.0,main="Human Impacts of Tornadoes (1/1/1990 - 11/30/2011)",
-              xlab="States in USA",ylab="Fatalities + Injuries")
-```
-<figcaption>
-Histograph of human impact from tornadoes from 1/1/1990 - 11/30/2011.
-</figcaption>
-</figure>
-
-The following plot will show pictorially the economic impact of tornadoes in each of the states in the United States starting from January 1, 1990 to November 30, 2011. The barplot shows that Alabama and Missouri had top two severe economic impacts due to tornadoes.
-
-<figure>
-```{r, echo=TRUE, cache=TRUE}
-adate <- "01/01/1990 0:00:00"
-r4 <- dfsmall[grep("TORNADOES",dfsmall$EVTYPE),]
-r4 <- subset(r4,r4$BGN_DATE > adate)
-r5 <- ddply(r4,.(STATE),colwise(sum, c("TOTALCASH")))
-bp <- barplot(round(r5$TOTALCASH/10^6,2),las=2,names=r5$STATE,cex.names=0.5,cex.axis=0.5,
-              horiz=FALSE,space=5.0,main="Economic Impacts of Tornadoes (1/1/1990 - 11/30/2011)",
-              xlab="States in USA",ylab="Crop and Property Damage Costs in Millions")
-```
-<figcaption>
-Histograph of economic impact from tornadoes from 1/1/1990 - 11/30/2011.
-</figcaption>
-</figure>
 
 ### Conclusions
 
