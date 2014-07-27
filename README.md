@@ -1,9 +1,5 @@
----
-title: "Evaluation of the Effects of Natural Diasters on Humans and its Monetary Costs"
-output:
-  html_document:
-    fig_caption: yes
----
+
+### Evaluation of the Effects of Natural Diasters on Humans and its Monetary Costs
 
 ### Synopsis
 
