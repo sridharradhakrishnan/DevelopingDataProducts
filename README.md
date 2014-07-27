@@ -69,8 +69,6 @@ We are going to focus on the following 8 events as given in the manual of the Fe
 * FLOOD
 * TORNADOES
 * HURRICANES
-* THUNDERSTROM & LIGHTNING
-* WINTER STROM & EXTREME COLD
 * EXCESSIVE HEAT
 * WILD FIRES
 * HIGH WINDS
